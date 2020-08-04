@@ -769,22 +769,22 @@ layui.define(['jquery'], function(exports) {
 							}
 						}
 					});
-/*					player.on('loadstart', function() {
-						if (mojia.global.mobile()) {
+					player.on('loadstart', function() {
+						/*if (mojia.global.mobile()) {
 							$('video').attr('controls', 'true');
 							$('.dplayer-controller,.dplayer-mobile-play').hide();
 						}
 						$('video').attr('playsinline', 'true');
 						$('video').attr('x5-playsinline', 'true');
 						$('video').attr('webkit-playsinline', 'true');
-						$('video').attr('autoplay', JSON.parse($(str).attr('data-auto')));
+						$('video').attr('autoplay', JSON.parse($(str).attr('data-auto')));*/
 						$('.mo-play-player').show().css('z-index', '99');
 						$('.dplayer-info-panel-close').html('×').css('font-size', '20px').css('font-family', 'monospace');
 						$('.dplayer-info-panel').css('line-height', '20px');
 						$('.dplayer-icon.dplayer-full-in-icon').remove();
 						$('.mo-play-load').hide();
 						mojia.player.logo('player', str);
-					});*/
+					});
 					player.on('loadeddata', function() {
 						if (mojia.cookie.get(sole) && JSON.parse(live) == false) {
 							if (player.video.duration - mojia.cookie.get(sole) < 60 || mojia.cookie.get(sole) < $(str).attr('data-trys') * 60) player.seek(0);
