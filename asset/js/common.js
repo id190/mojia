@@ -676,7 +676,7 @@ layui.define(['jquery'], function(exports) {
 			'iframe': function(str, parse) {
 				mojia.player.logo('iframe', str);
 				var iframe = document.getElementById('mo-play-iframe');
-				iframe.src = $(parse).attr('data-parse') + mojia.player.video(str);
+				iframe.src = $(parse).attr('data-parse') + mojia.player.video(str)+'&data-sole='+$(str).attr('data-sole')+'&data-next='+$(str).attr('data-next');
 				if ($(str).attr('data-code') != 1) {
 					if (/iPhone|iPad|iPod|iOS/i.test(navigator.userAgent) || $(str).attr('data-sees') == 1) {
 						var text = $('.mo-play-trysee').show().css('z-index', '99').find('h2').text();
